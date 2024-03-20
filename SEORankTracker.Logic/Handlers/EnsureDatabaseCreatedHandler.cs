@@ -9,6 +9,7 @@ public sealed class EnsureDatabaseCreatedHandler(ILogger<EnsureDatabaseCreatedHa
     {
         _logger.LogInformation("Creating database...");
         bool created = await _application_database_context.Database.EnsureCreatedAsync(cancellation_token);
+
         _logger.LogInformation("Result: {created}", created);
         return await Task.FromResult(new EnsureDatabaseCreatedResponse { Created = created });
     }

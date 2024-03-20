@@ -1,6 +1,8 @@
 global using FluentValidation;
+global using Mapster;
 global using MediatR.Pipeline;
 global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.Extensions.Logging;
 global using SEORankTracker.Database;

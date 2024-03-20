@@ -24,19 +24,7 @@ public sealed class HistoryHandler(ApplicationDatabaseContext application_databa
 
         HistoryResponse response = new()
         {
-            Results = entries.Select(x => new HistoryResponseModel
-            {
-                Id = x.Id,
-                Error = x.Error,
-                Occurrences = x.Occurrences,
-                RankListCsv = x.RankListCsv,
-                SearchEngine = x.SearchEngine,
-                SearchTerm = x.SearchTerm,
-                MatchTerm = x.MatchTerm,
-                Success = x.Success,
-                Url = x.Url,
-                UtcDateTime = x.UtcDateTime
-            }).ToList(),
+            Results = entries.Adapt<List<HistoryResponseModel>>(),
             TotalItems = total_items
         };
 

@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Configuration;
-
-namespace SEORankTracker.Logic.Handlers;
+﻿namespace SEORankTracker.Logic.Handlers;
 
 public sealed class SearchHandler(IConfiguration configuration, SearchProviderFactory search_provider_factory, ApplicationDatabaseContext application_database_context) : IAsyncDialogueHandler<SearchRequest, SearchResponse>
 {
@@ -15,19 +13,7 @@ public sealed class SearchHandler(IConfiguration configuration, SearchProviderFa
         ISearchProvider provider = _search_provider_factory.InstantiateFromName(request.SearchProvider, request.SearchTerm);
         SearchProviderResult search_provider_result = await provider.SearchProviderProcessAsync(match_term, cancellation_token);
 
-        SearchEntry search_entry = new()
-        {
-            Id = 0,
-            Occurrences = search_provider_result.Occurrences,
-            RankListCsv = search_provider_result.RankListCsv,
-            SearchEngine = search_provider_result.SearchEngine,
-            SearchTerm = search_provider_result.SearchTerm,
-            MatchTerm = search_provider_result.MatchTerm,
-            Success = search_provider_result.Success,
-            Error = search_provider_result.Error,
-            Url = search_provider_result.Url,
-            UtcDateTime = search_provider_result.UtcDateTime
-        };
+        SearchEntry search_entry = search_provider_result.Adapt<SearchEntry>();
 
         await _application_database_context.AddAsync(search_entry, cancellation_token);
         await _application_database_context.SaveChangesAsync(cancellation_token);

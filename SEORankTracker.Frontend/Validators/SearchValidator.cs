@@ -1,6 +1,4 @@
-﻿using SEORankTracker.Frontend.ViewModels;
-
-namespace SEORankTracker.Frontend.Validators;
+﻿namespace SEORankTracker.Frontend.Validators;
 
 public class SearchValidator : AbstractValidator<SearchViewModel>
 {

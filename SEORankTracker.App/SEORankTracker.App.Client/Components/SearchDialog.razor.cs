@@ -78,7 +78,7 @@ public partial class SearchDialog
 
             if (results.Failed is true)
             {
-                // display some error to UI / toast, dialog or otherwise...
+                // display some warning to UI / toast, dialog or otherwise...
                 _ = results.HttpResponseMessage.StatusCode;
             }
         }

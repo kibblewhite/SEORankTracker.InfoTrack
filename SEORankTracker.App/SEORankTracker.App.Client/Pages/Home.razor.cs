@@ -56,19 +56,7 @@ public partial class Home
                 ? new TableData<HistoryViewModel>() { Items = [] }
                 : new TableData<HistoryViewModel>()
                     {
-                        Items = results.Response.Results.Select(x => new HistoryViewModel
-                        {
-                            Id = x.Id,
-                            Error = x.Error,
-                            Occurrences = x.Occurrences,
-                            RankListCsv = x.RankListCsv,
-                            SearchEngine = x.SearchEngine,
-                            SearchTerm = x.SearchTerm,
-                            MatchTerm = x.MatchTerm,
-                            Success = x.Success,
-                            Url = x.Url,
-                            UtcDateTime = x.UtcDateTime
-                        }),
+                        Items = results.Response.Results.Adapt<IEnumerable<HistoryViewModel>>(),
                         TotalItems = results.Response.TotalItems,
                     };
         }

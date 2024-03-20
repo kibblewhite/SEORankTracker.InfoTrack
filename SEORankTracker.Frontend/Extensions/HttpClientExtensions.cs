@@ -1,6 +1,4 @@
-﻿using SEORankTracker.Frontend.Utilities;
-
-namespace SEORankTracker.Frontend.Extensions;
+﻿namespace SEORankTracker.Frontend.Extensions;
 
 public static class HttpClientExtensions
 {
