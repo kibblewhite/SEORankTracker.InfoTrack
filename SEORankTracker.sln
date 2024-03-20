@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEORankTracker.App.Server", "SEORankTracker.App\SEORankTracker.App.Server\SEORankTracker.App.Server.csproj", "{3B791A82-7B3E-4DB6-8945-5278F8437806}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEORankTracker.Logic", "SEORankTracker.Logic\SEORankTracker.Logic.csproj", "{BE634C87-D11C-4EA1-9496-6970BE46A95B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2466D6FA-25E9-4D9F-9BC4-970DE50ACE06}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		NuGet.config = NuGet.config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEORankTracker.Database", "SEORankTracker.Database\SEORankTracker.Database.csproj", "{776190AA-9F4B-4D4D-AAB6-773BDD12170D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEORankTracker.Shared", "SEORankTracker.Shared\SEORankTracker.Shared.csproj", "{E4CA863D-B6B1-4B02-8B04-D99F0F3B3C2F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEORankTracker.App.Client", "SEORankTracker.App\SEORankTracker.App.Client\SEORankTracker.App.Client.csproj", "{D3D1B2F6-3B9E-46C4-9908-4D3147F1450E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SEORankTracker.Frontend", "SEORankTracker.Frontend\SEORankTracker.Frontend.csproj", "{035EDE4C-DEEF-42C9-ACF2-0FC11FAB534A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B791A82-7B3E-4DB6-8945-5278F8437806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B791A82-7B3E-4DB6-8945-5278F8437806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B791A82-7B3E-4DB6-8945-5278F8437806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B791A82-7B3E-4DB6-8945-5278F8437806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE634C87-D11C-4EA1-9496-6970BE46A95B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE634C87-D11C-4EA1-9496-6970BE46A95B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE634C87-D11C-4EA1-9496-6970BE46A95B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE634C87-D11C-4EA1-9496-6970BE46A95B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{776190AA-9F4B-4D4D-AAB6-773BDD12170D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776190AA-9F4B-4D4D-AAB6-773BDD12170D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776190AA-9F4B-4D4D-AAB6-773BDD12170D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776190AA-9F4B-4D4D-AAB6-773BDD12170D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4CA863D-B6B1-4B02-8B04-D99F0F3B3C2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4CA863D-B6B1-4B02-8B04-D99F0F3B3C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4CA863D-B6B1-4B02-8B04-D99F0F3B3C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4CA863D-B6B1-4B02-8B04-D99F0F3B3C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3D1B2F6-3B9E-46C4-9908-4D3147F1450E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3D1B2F6-3B9E-46C4-9908-4D3147F1450E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3D1B2F6-3B9E-46C4-9908-4D3147F1450E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3D1B2F6-3B9E-46C4-9908-4D3147F1450E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{035EDE4C-DEEF-42C9-ACF2-0FC11FAB534A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{035EDE4C-DEEF-42C9-ACF2-0FC11FAB534A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{035EDE4C-DEEF-42C9-ACF2-0FC11FAB534A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{035EDE4C-DEEF-42C9-ACF2-0FC11FAB534A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D9815E8-55DE-4824-9E3D-809001BFEB01}
+	EndGlobalSection
+EndGlobal

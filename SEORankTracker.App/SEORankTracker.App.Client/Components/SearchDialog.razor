@@ -1,0 +1,26 @@
+﻿<EditForm EditContext="edit_context" OnValidSubmit="SubmitAsync">
+    <MudDialog>
+        <DialogContent>
+
+            <MudSelect name="@nameof(view_model.SearchProvider)" ValueChanged="view_model.OnSearchProviderChangedEvent" T="SelectListItem" ToStringFunc="SelectListItemConverter" Label="Search Provider" AnchorOrigin="Origin.BottomCenter">
+                @foreach (SelectListItem item in SearchProvidersSelectListItems)
+                {
+                    <MudSelectItem T="SelectListItem" Value="@item">@item.Text</MudSelectItem>
+                }
+            </MudSelect>
+
+            <MudTextField name="@nameof(view_model.SearchTerm)" ValueChanged="view_model.OnSearchTermChangedEvent" T="string" Label="Search Term"></MudTextField>
+
+            <Microsoft.AspNetCore.Components.Forms.ValidationSummary />
+
+        </DialogContent>
+        <DialogActions>
+            <MudButton OnClick="Cancel" Disabled=@is_task_running>
+                <MudText>Cancel</MudText>
+            </MudButton>
+            <MudButton OnClick="ForceClearMessageStore" ButtonType="ButtonType.Submit" Color="Color.Primary" Disabled=@is_task_running>
+                <MudText>Submit</MudText>
+            </MudButton>
+        </DialogActions>
+    </MudDialog>
+</EditForm>

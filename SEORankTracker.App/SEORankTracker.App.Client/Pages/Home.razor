@@ -1,0 +1,58 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<MudContainer Class="mt-16" MaxWidth="MaxWidth.ExtraLarge">
+
+    <MudText Typo="Typo.h2">Hello, World!</MudText>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="TestClickAsync">Add Search</MudButton>
+
+    <MudDivider Class="my-6"></MudDivider>
+
+    <MudTable @ref="_table" ServerData="@(new Func<TableState, Task<TableData<HistoryViewModel>>>(ReloadTableAsync))" Hover="true" LoadingProgressColor="Color.Primary" Loading="@_is_loading">
+
+        <HeaderContent>
+            <MudTh>@nameof(HistoryViewModel.Id)</MudTh>
+            <MudTh>@nameof(HistoryViewModel.SearchEngine)</MudTh>
+            <MudTh>@nameof(HistoryViewModel.SearchTerm)</MudTh>
+            <MudTh>@nameof(HistoryViewModel.MatchTerm)</MudTh>
+            <MudTh>@nameof(HistoryViewModel.Url)</MudTh>
+            <MudTh>@nameof(HistoryViewModel.Occurrences)</MudTh>
+            <MudTh>@nameof(HistoryViewModel.RankListCsv)</MudTh>
+            <MudTh>@nameof(HistoryViewModel.UtcDateTime)</MudTh>
+            <MudTh>@nameof(HistoryViewModel.Success)</MudTh>
+            <MudTh>@nameof(HistoryViewModel.Error)</MudTh>
+        </HeaderContent>
+
+        <RowTemplate>
+            <MudTd DataLabel="@nameof(HistoryViewModel.Id)">@context.Id</MudTd>
+            <MudTd DataLabel="@nameof(HistoryViewModel.SearchEngine)">@context.SearchEngine</MudTd>
+            <MudTd DataLabel="@nameof(HistoryViewModel.SearchTerm)">@context.SearchTerm</MudTd>
+            <MudTd DataLabel="@nameof(HistoryViewModel.MatchTerm)">@context.MatchTerm</MudTd>
+            <MudTd DataLabel="@nameof(HistoryViewModel.Url)">@context.Url</MudTd>
+            <MudTd DataLabel="@nameof(HistoryViewModel.Occurrences)">@context.Occurrences</MudTd>
+            <MudTd DataLabel="@nameof(HistoryViewModel.RankListCsv)">@context.RankListCsv</MudTd>
+            <MudTd DataLabel="@nameof(HistoryViewModel.UtcDateTime)">@context.UtcDateTime</MudTd>
+            <MudTd DataLabel="@nameof(HistoryViewModel.Success)">@context.Success</MudTd>
+            <MudTd DataLabel="@nameof(HistoryViewModel.Error)">@context.Error</MudTd>
+        </RowTemplate>
+
+        <NoRecordsContent>
+            <MudGrid Class="mud-width-full">
+                <MudItem xs="12">
+                    <MudText>No records found</MudText>
+                </MudItem>
+            </MudGrid>
+        </NoRecordsContent>
+
+        <LoadingContent>
+            <MudText>Loading...</MudText>
+        </LoadingContent>
+
+        <PagerContent>
+            <MudTablePager PageSizeOptions="[5, 10, 20]" ShowFirstButton="true" ShowLastButton="true" Class="m-3" Rectangular="true" Variant="Variant.Text" />
+        </PagerContent>
+
+    </MudTable>
+
+</MudContainer>

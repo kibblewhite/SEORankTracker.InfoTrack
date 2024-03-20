@@ -1,0 +1,13 @@
+﻿global using Microsoft.AspNetCore.Components;
+global using Microsoft.AspNetCore.Components.Forms;
+global using Microsoft.AspNetCore.Components.Web;
+global using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+global using MudBlazor;
+global using MudBlazor.Services;
+global using SEORankTracker.App.Client.Components;
+global using SEORankTracker.Frontend.Extensions;
+global using SEORankTracker.Frontend.Utilities;
+global using SEORankTracker.Frontend.Validators;
+global using SEORankTracker.Frontend.ViewModels;
+global using SEORankTracker.Shared.Requests;
+global using SEORankTracker.Shared.Responses;
