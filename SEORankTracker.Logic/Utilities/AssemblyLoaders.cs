@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SEORankTracker.Logic.Utilities;
+﻿namespace SEORankTracker.Logic.Utilities;
 
 public static class AssemblyLoaders
 {

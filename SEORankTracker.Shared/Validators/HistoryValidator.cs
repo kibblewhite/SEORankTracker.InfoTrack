@@ -2,5 +2,9 @@
 
 public sealed class HistoryValidator : AbstractValidator<HistoryRequest>
 {
-    public HistoryValidator() { }
+    public HistoryValidator()
+    {
+        RuleFor(x => x.PageSize).GreaterThan(0);
+        RuleFor(x => x.Page).GreaterThan(-1);
+    }
 }
