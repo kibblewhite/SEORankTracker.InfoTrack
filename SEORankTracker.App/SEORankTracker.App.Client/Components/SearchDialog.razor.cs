@@ -78,6 +78,7 @@ public partial class SearchDialog
 
             if (results.Failed is true)
             {
+                // "application/problem+json"
                 // display some warning to UI / toast, dialog or otherwise...
                 _ = results.HttpResponseMessage.StatusCode;
             }

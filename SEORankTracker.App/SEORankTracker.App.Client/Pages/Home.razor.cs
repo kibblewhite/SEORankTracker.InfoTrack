@@ -21,7 +21,7 @@ public partial class Home
         }
     }
 
-    private async Task TestClickAsync(MouseEventArgs args)
+    private async Task OpenSearchDialogAsync(MouseEventArgs args)
     {
         DialogParameters<SearchDialog> parameters = new()
         {
